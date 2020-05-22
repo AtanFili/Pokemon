@@ -33,6 +33,9 @@ inner class MyViewHolder(view:View):RecyclerView.ViewHolder(view){
 
         itemView.text_view_name.text=itemModel.name
         itemView.text_view_position.text=position.toString()
+        itemView.constraint_layout_name.setOnClickListener {
+            pokemonListAdapterClickEvent.invoke(PokemonListAdapterClickEvent.PokemonListAdapterItemClicked(itemModel))
+        }
 
     }
 }

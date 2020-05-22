@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+
+    <ImageView
+        android:id="@+id/image_view_pokemon_details"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:background="@color/colorPrimary"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_view_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/image_back"
+        app:layout_constraintStart_toStartOf="@id/image_view_pokemon_details"
+        app:layout_constraintTop_toTopOf="@id/image_view_pokemon_details" />
+
+    <TextView
+        android:id="@+id/text_view_pokemon_name"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/image_view_pokemon_details"
+        app:layout_constraintEnd_toStartOf="parent"/>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraint_layout_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/image_view_pokemon_details"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:padding="16dp"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/text_view_info_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/text_view_info_position"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/text_view_info_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_info_type_slot1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fire"
+        android:textAllCaps="true"
+        app:layout_constraintTop_toBottomOf="@id/text_view_info_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/blue"
+        android:padding="6dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/text_view_info_type_slot2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flying"
+        android:textAllCaps="true"
+        app:layout_constraintTop_toBottomOf="@id/text_view_info_name"
+        app:layout_constraintStart_toEndOf="@id/text_view_info_type_slot1"
+        android:background="@color/blue"
+        android:padding="6dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/text_view_info_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height:17m"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/text_view_info_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight:90kg"
+        app:layout_constraintTop_toBottomOf="@id/text_view_info_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/constraint_layout_info"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+       android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_margin="16dp"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/text_view_base_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:text="Base Stats"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <ProgressBar
+            android:id="@+id/progress_bar_stat1"
+            android:layout_margin="25dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_base_stats"
+            android:max="100"
+            android:progress="73"/>
+
+<TextView
+   android:id="@+id/text_view_stat1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/text_view_base_stats"
+    app:layout_constraintEnd_toStartOf="@id/progress_bar_stat1"
+    app:layout_constraintTop_toTopOf="@id/progress_bar_stat1"
+    android:text="78"
+    android:textColor="@color/white"
+    android:layout_marginEnd="10dp"/>
+        <TextView
+            android:id="@+id/text_view_name_stat1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/text_view_stat1"
+            app:layout_constraintTop_toBottomOf="@id/text_view_stat1"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
