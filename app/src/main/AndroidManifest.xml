@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".list.PokemonListActivity" />
-        <activity android:name=".details.PokemonDetailsActivity"/>
+        <activity android:name=".details.PokemonDetailsViewPager"/>
 
     </application>
 
